@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="Formulario de matriculación para cualquiera de los cursos de Neolingua.">
+	<title> Matrícula | Neolingua </title>
+	<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+	<style> @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap'); </style>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet">
+	<style> @import url('https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap'); </style>
+</head>
+
+<body>
+
+	<!-- ############### CABECERA: LOGO Y MENÚ SUPERIOR ############### -->
+
+	<header>
+	
+		<a title="logo" href="index.html"><img class="logo" src="images/logo.png" alt="logo"></a>
+					
+		<nav>
+		  <ul>
+		    <li><a href="index.html">Inicio</a></li>
+		    <li><a href="cursos.html">Cursos</a></li>
+		    <li><a href="matricula.html">Matrícula</a></li>
+		    <li><a href="faq.html">FAQ</a></li>
+		    <li><a href="contacto.html">Cont&aacute;ctanos</a></li>
+		  </ul>
+		</nav>
+
+	</header>
+
+
+	<!-- ############### FORMULARIO DE MATRÍCULA A UN CURSO ############### -->
+	
+	<div class="matricula">
+		<form action="form.php" class="matricula" method="post">
+			<fieldset>
+				<h2> Formulario de matrícula </h2>
+
+				<div class="input">
+					<label for="nombre"> <strong> Nombre </strong> </label>
+					<input type="text" name="nombre" id="nombre" value="" required>
+				</div>
+
+				<div class="input">
+					<label for="apellido1"> <strong> Primer apellido </strong> </label>
+					<input type="text" name="apellido1" id="apellido1" value="" required>
+				</div>
+
+				<div class="input">
+					<label for="apellido2"> <strong> Segundo apellido </strong> </label>
+					<input type="text" name="apellido2" id="apellido2" value="" required>
+				</div>
+
+				<div class="input">
+					<label for="dni"> <strong> DNI </strong> </label>
+					<input type="text" name="dni" id="dni" value="" maxlength="9" required>
+				</div>
+
+				<div class="input">
+					<label for="fecha_nacimiento"> <strong> Fecha de nacimiento </strong> </label>
+					<input type="date" name="fecha_nacimiento" id="fecha_nacimiento" value="" required>
+				</div>
+
+				<div class="input">
+					<label for="lugar_nacimiento"> <strong> Lugar de nacimiento </strong> </label>
+					<input type="text" name="lugar_nacimiento" id="lugar_nacimiento" value="" required>
+				</div>
+
+				<div class="input">
+					<label for="direccion"> <strong> Dirección de domicilio </strong> </label>
+					<input type="text" name="direccion" id="direccion" value="" required>
+				</div>
+
+				<div class="input">
+					<label for="email"> <strong> Correo electrónico </strong> </label>
+					<input type="email" name="email" id="email" value="" required>
+				</div>
+
+				<div class="input">
+					<label for="telefono1"> <strong> Número de teléfono 1 </strong> </label>
+					<input type="tel" name="telefono1" id="telefono1" value="" required>
+				</div>
+
+				<div class="input">
+					<label for="telefono2"> <strong> Número de teléfono 2 </strong> </label>
+					<input type="tel" name="telefono2" id="telefono2" value="">
+				</div>
+
+				<div class="input">
+					<label for="curso"> <strong> Curso al que opta </strong> </label>
+					<select id="curso" name="curso">
+						<option value="" selected="selected"> - selecciona - </option>
+						<option value="inglés"> Inglés </option>
+						<option value="francés"> Francés </option>
+						<option value="alemán"> Alemán </option>
+					</select>
+				</div>
+
+				<div class="input">
+					<label for="nivel"> <strong> Nivel al que opta </strong> </label>
+					<select id="nivel" name="nivel" required="">
+						<option value="" selected="selected"> - selecciona - </option>
+						<option value="A1"> A1 </option>
+						<option value="A2"> A2 </option>
+						<option value="B1"> B1 </option>
+						<option value="B2"> B2 </option>
+						<option value="C1"> C1 </option>
+					</select>
+				</div>
+
+				<p class="politica-de-privacidad"> Neolingua, S.L., tratará tus datos con la finalidad de dar respuesta a tu consulta o solicitud. Puedes acceder, rectificar y suprimir tus datos, así como ejercer otros derechos consultando la información adicinal y detallada sobre protección de datos en nuestra <a href="politica-de-privacidad.html"> Política de privacidad</a>. </p>
+
+				<div class="input">
+					<input type="checkbox" name="aceptar-condiciones" value="Acepto las condiciones d" required>
+					<span> He leído y acepto las condiciones contenidas en la política de privacidad sobre el tratamiento de mis datos para gestionar mi consulta o solicitud. </span>
+				</div>
+
+				<div class="botones">
+					<input type="reset" name="limpiar" value="Borrar datos">
+					<input type="submit" name="enviar" value="Enviar solicitud">
+				</div>
+			</fieldset>
+		</form>
+	</div>
+
+	<div class="info">
+		<p> Una vez solicitada la matrícula, se enviará un correo electrónico a la dirección introducida anteriormente con la documentación necesaria para realizar la matrícula y el pago.
+		Se deberá presentar dicha documentación junto al recibo de pago en la secretaría del centro en el que se realizará el curso para finalizar la matrícula de manera definitiva. </p>
+	</div>
+
+	<!-- ############### PIE DE PÁGINA ############### -->
+	<div class="pie">
+		<footer>
+				<div class="footer">
+					<div class="elemento"> <p> Av. Prat de la Riba, 20, 43001 Tarragona </p> </div>
+					<div class="elemento"> <p> Lunes a Viernes, de 08:00 a 20:00 </p> </div>
+					<div class="elemento"> <p> admin@neolingua.com </p> </div>
+					<div class="elemento"> <p> (+34) 977 57 37 99 </p> </div>
+					<div class="elemento"> <p> <a href="politica-de-privacidad.html"> Política de privacidad </p></a> </div>
+				</div>
+		</footer>
+	</div>
+	
+
+
+</body>
+
+</html>
